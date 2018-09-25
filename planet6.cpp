@@ -19,10 +19,10 @@ while(1){
 cvGrabFrame(captue);
 if(  (src0=cvRetrieveFrame(captue)) != 0)
 {
-  IplImage* dst = cvCreateImage(cvGetSize(src0), IPL_DEPTH_8U, 1 );
-  IplImage* color_dst = cvCreateImage(cvGetSize(src0), IPL_DEPTH_8U, 3 );
+  IplImage* dst = cvCreateImage(cvGetSize(src0), 8, 1 );
+  IplImage* color_dst = cvCreateImage(cvGetSize(src0), 8, 3 );
 
-  IplImage* src = cvCreateImage(cvGetSize(src0), IPL_DEPTH_8U, 1);
+  IplImage* src = cvCreateImage(cvGetSize(src0), 8, 1);
 
   cvCvtColor(src0, src, CV_RGB2GRAY); // 컬러를 흑백으로 변환
 
